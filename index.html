@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="blue">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Horus — Record once. Farm forever. | Anime Expeditions vision macro</title>
+  <meta name="description" content="Horus is an external record-and-replay vision macro for Anime Expeditions. Play a stage once and let it attach, claim rewards, and loop while you're away. Free recorder + $4.99 lifetime Premium.">
+  <meta name="theme-color" content="#07080f">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Horus — Record once. Farm forever.">
+  <meta property="og:description" content="External record-and-replay macro for Anime Expeditions. Record once, then it attaches, claims rewards, and loops unattended. Free + $4.99 Premium.">
+  <meta property="og:image" content="assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Horus — Record once. Farm forever.">
+  <meta name="twitter:description" content="External record-and-replay macro for Anime Expeditions. Free recorder + $4.99 lifetime Premium.">
+  <meta name="twitter:image" content="assets/og.png">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Cascadia+Code&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ambient smoke -->
+  <div class="bg-fixed" aria-hidden="true"></div>
+  <div class="blob blob-a themed" aria-hidden="true"></div>
+  <div class="blob blob-b themed" aria-hidden="true"></div>
+
+  <div class="page-wrap">
+
+    <!-- ============ NAV ============ -->
+    <header class="nav themed">
+      <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="Horus home">
+          <span class="mark themed" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"><circle cx="50" cy="50" r="30"/><circle cx="50" cy="50" r="12"/><line x1="50" y1="4" x2="50" y2="96"/><line x1="4" y1="50" x2="96" y2="50"/><line x1="17" y1="17" x2="83" y2="83"/><line x1="83" y1="17" x2="17" y2="83"/><circle cx="50" cy="50" r="4" fill="currentColor" stroke="none"/></svg>
+          </span>
+          <span class="name">HORUS</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#features">Features</a>
+          <a href="#demo">Demo</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a href="setup.html">Setup</a>
+          <a href="changelog.html">Changelog</a>
+        </nav>
+
+        <div class="nav-right">
+          <div class="theme-picker" role="group" aria-label="Color theme">
+            <button class="theme-auto active" type="button" aria-pressed="true" title="Auto-cycle themes">AUTO</button>
+            <button class="swatch" type="button" data-theme="blue" aria-pressed="false" aria-label="Blue theme"></button>
+            <button class="swatch" type="button" data-theme="red" aria-pressed="false" aria-label="Red theme"></button>
+            <button class="swatch" type="button" data-theme="teal" aria-pressed="false" aria-label="Teal theme"></button>
+          </div>
+          <!-- TODO: replace href="#discord" with your permanent Discord invite URL -->
+          <a class="btn btn-ghost" href="#discord">Discord</a>
+          <!-- TODO: replace href="#pricing" target as desired -->
+          <a class="btn btn-primary themed" href="#pricing">Get Premium</a>
+        </div>
+
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+      </div>
+
+      <!-- mobile menu -->
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="#features">Features</a>
+        <a href="#demo">Demo</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="setup.html">Setup</a>
+        <a href="changelog.html">Changelog</a>
+        <div class="divider"></div>
+        <div class="theme-picker-mobile" role="group" aria-label="Color theme">
+          <button class="theme-auto active" type="button" aria-pressed="true">AUTO</button>
+          <button class="swatch" type="button" data-theme="blue" aria-pressed="false" aria-label="Blue theme"></button>
+          <button class="swatch" type="button" data-theme="red" aria-pressed="false" aria-label="Red theme"></button>
+          <button class="swatch" type="button" data-theme="teal" aria-pressed="false" aria-label="Teal theme"></button>
+        </div>
+        <a class="btn btn-ghost" href="#discord">Discord</a>
+        <a class="btn btn-primary themed" href="#pricing">Get Premium</a>
+      </div>
+    </header>
+
+    <span id="top"></span>
+    <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div>
+        <div class="pill themed">
+          <span class="dot" aria-hidden="true"></span>Anime Expeditions · vision macro
+        </div>
+        <h1>Record once.<br><span class="accent themed">Farm forever.</span></h1>
+        <p>Horus watches your screen and replays your setup — no coding, no coordinate editing. Play a stage once, then let it attach, claim rewards, and loop while you're away.</p>
+        <div class="cta-row">
+          <!-- TODO: Discord invite URL -->
+          <a class="btn btn-primary btn-lg themed" href="#discord">Download free</a>
+          <a class="btn btn-elev btn-lg" href="#pricing">Get Premium — $4.99</a>
+        </div>
+        <div class="ticks">
+          <span>✓ External only — no injection</span>
+          <span>✓ No Python needed</span>
+          <span>✓ Any PC / resolution</span>
+        </div>
+      </div>
+
+      <!-- floating app mock -->
+      <div class="mock" aria-hidden="true">
+        <div class="mock-glow themed"></div>
+        <div class="mock-win themed">
+          <div class="mock-title themed"><span class="chip themed"></span>Horus — Anime Expeditions Macro<span style="margin-left:auto;opacity:.5;">— ▢ ✕</span></div>
+          <div class="mock-bar themed"></div>
+          <div class="mock-body">
+            <div class="mock-head">
+              <span class="logo themed">
+                <svg width="38" height="38" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"><circle cx="50" cy="50" r="30"/><circle cx="50" cy="50" r="12"/><line x1="50" y1="4" x2="50" y2="96"/><line x1="4" y1="50" x2="96" y2="50"/><line x1="17" y1="17" x2="83" y2="83"/><line x1="83" y1="17" x2="17" y2="83"/><circle cx="50" cy="50" r="4" fill="currentColor" stroke="none"/></svg>
+              </span>
+              <div>
+                <div class="ttl">HORUS</div>
+                <div class="sub themed">VISION MACRO</div>
+              </div>
+              <span class="mock-badge themed">✦ PREMIUM</span>
+            </div>
+            <div class="mock-tabs themed">
+              <span class="mock-tab on themed">▶ PLAY</span>
+              <span class="mock-tab off">● RECORD</span>
+            </div>
+            <div class="mock-select themed">
+              <svg width="13" height="13" viewBox="0 0 100 100" style="color:var(--accent)"><path d="M50 6 L59 41 L94 50 L59 59 L50 94 L41 59 L6 50 L41 41 Z" fill="currentColor"/></svg>
+              spirit_city_a3.yaml<span class="caret">▾</span>
+            </div>
+            <div class="mock-start themed">▶ START <span class="key">F8</span></div>
+            <div class="mock-log themed">
+              <div class="ok">✓ Attach: new run loading.</div>
+              <div class="act themed">⚑ Place unit #1 → slot 5</div>
+              <div class="dim">… looping run 14 · 3h 20m unattended</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUST STRIP ============ -->
+    <section class="trust">
+      <div class="trust-grid themed">
+        <div class="trust-cell themed">
+          <h3>External only</h3>
+          <p>No injection, no memory reads — Horus just watches the screen and moves the mouse, like a person would.</p>
+        </div>
+        <div class="trust-cell themed">
+          <h3>Works on any PC</h3>
+          <p>DPI-aware and resolution-independent. Record at your setup once and it self-calibrates.</p>
+        </div>
+        <div class="trust-cell themed">
+          <h3>No Python needed</h3>
+          <p>Unzip and run Horus.exe. Nothing to install, no dependencies, no command line.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DEMO ============ -->
+    <section id="demo" class="section section-narrow section-center">
+      <div class="eyebrow themed">See it run</div>
+      <h2 class="h2">Record once → it farms while you're away</h2>
+      <p class="lead" style="margin:14px auto 30px;max-width:620px;">The 60-second demo is the whole pitch. Drop your screen-record into this slot.</p>
+      <!-- TODO: replace this placeholder slot with the real <video> or a YouTube/embed iframe -->
+      <div class="demo-slot themed">
+        <div class="hatch" aria-hidden="true"></div>
+        <div class="center">
+          <div class="play-btn themed" aria-hidden="true">▶</div>
+          <div class="note">↳ drop your 30–60s screen-record here</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section">
+      <div class="head-block">
+        <div class="eyebrow themed">Three steps</div>
+        <h2 class="h2">No coding. No coordinates.</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card themed">
+          <div class="num themed" aria-hidden="true">1</div>
+          <h3>Download &amp; unzip</h3>
+          <p>Grab the free build from the Discord, unzip the folder, and run Horus.exe.</p>
+        </div>
+        <div class="card themed">
+          <div class="num themed" aria-hidden="true">2</div>
+          <h3>Record your setup</h3>
+          <p>Open the game, hit RECORD, play a stage once. F7 saves it as a reusable layout.</p>
+        </div>
+        <div class="card themed">
+          <div class="num themed" aria-hidden="true">3</div>
+          <h3>Press START</h3>
+          <p>Pick the layout on the PLAY tab and go. Premium keeps looping and claims rewards for you.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section id="features" class="section">
+      <div class="head-block">
+        <div class="eyebrow themed">Why Horus</div>
+        <h2 class="h2">Built to set and forget</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card feature themed">
+          <div class="icon themed" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 100 100"><path d="M50 6 L59 41 L94 50 L59 59 L50 94 L41 59 L6 50 L41 41 Z" fill="currentColor"/></svg></div>
+          <h3>Record &amp; replay</h3>
+          <p>Play a setup once; Horus captures every placement and click as a clean layout file.</p>
+        </div>
+        <div class="card feature themed">
+          <div class="icon themed" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 100 100"><path d="M50 6 L59 41 L94 50 L59 59 L50 94 L41 59 L6 50 L41 41 Z" fill="currentColor"/></svg></div>
+          <h3>Auto-attach</h3>
+          <p>Detects the Victory/Defeat screen and re-queues the next run with no input from you.</p>
+        </div>
+        <div class="card feature themed">
+          <div class="icon themed" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 100 100"><path d="M50 6 L59 41 L94 50 L59 59 L50 94 L41 59 L6 50 L41 41 Z" fill="currentColor"/></svg></div>
+          <h3>The farm loop</h3>
+          <p>Premium replays forever — attach, claim rewards, click through cutscenes, repeat.</p>
+        </div>
+        <div class="card feature themed">
+          <div class="icon themed" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 100 100"><path d="M50 6 L59 41 L94 50 L59 59 L50 94 L41 59 L6 50 L41 41 Z" fill="currentColor"/></svg></div>
+          <h3>Structured layouts</h3>
+          <p>Hand-tuned layouts for complex raids, so even the tricky stages run hands-free.</p>
+        </div>
+        <div class="card feature themed">
+          <div class="icon themed" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 100 100"><path d="M50 6 L59 41 L94 50 L59 59 L50 94 L41 59 L6 50 L41 41 Z" fill="currentColor"/></svg></div>
+          <h3>Reward click-through</h3>
+          <p>Handles the rewards screen and secret-unit cutscene automatically between runs.</p>
+        </div>
+        <div class="card feature themed">
+          <div class="icon themed" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 100 100"><path d="M50 6 L59 41 L94 50 L59 59 L50 94 L41 59 L6 50 L41 41 Z" fill="currentColor"/></svg></div>
+          <h3>Self-calibrating</h3>
+          <p>Record at your own resolution and window — no coordinate editing, ever.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section id="pricing" class="section pricing">
+      <div class="head-block">
+        <div class="eyebrow themed">Pricing</div>
+        <h2 class="h2">Free forever. Premium once.</h2>
+        <p class="lead" style="margin:12px auto 0;">The free recorder is genuinely good. Premium is the walk-away farm loop.</p>
+      </div>
+      <div class="plan-grid themed">
+        <!-- header row -->
+        <div class="plan-head-label themed"><span>Compare tiers</span></div>
+        <div class="plan-head themed">
+          <div class="tier">Free</div>
+          <div class="price">$0</div>
+          <div class="small">the funnel — keep it</div>
+          <!-- TODO: Discord invite URL -->
+          <a class="btn btn-elev" href="#discord">Download</a>
+        </div>
+        <div class="plan-head popular themed">
+          <span class="popular-tab themed">POPULAR</span>
+          <div class="tier pro themed">✦ Premium</div>
+          <div class="price">$4.99</div>
+          <div class="small">one-time · lifetime</div>
+          <!-- TODO: replace href="#buy" with your Sellix storefront URL -->
+          <a class="btn btn-primary themed" href="#buy">Buy on Sellix</a>
+        </div>
+
+        <!-- rows -->
+        <div class="plan-row-label themed">Record a setup</div>
+        <div class="plan-row-val yes themed">✓</div>
+        <div class="plan-row-val yes themed">✓</div>
+
+        <div class="plan-row-label themed">Replay once (queue a stage)</div>
+        <div class="plan-row-val yes themed">✓</div>
+        <div class="plan-row-val yes themed">✓</div>
+
+        <div class="plan-row-label themed">Structured raid layouts</div>
+        <div class="plan-row-val yes themed">✓</div>
+        <div class="plan-row-val yes themed">✓</div>
+
+        <div class="plan-row-label themed">Auto-attach from Victory/Defeat</div>
+        <div class="plan-row-val no themed">—</div>
+        <div class="plan-row-val yes themed">✓</div>
+
+        <div class="plan-row-label themed">Reward / cutscene click-through</div>
+        <div class="plan-row-val no themed">—</div>
+        <div class="plan-row-val yes themed">✓</div>
+
+        <div class="plan-row-label themed">Auto-replay forever (farm loop)</div>
+        <div class="plan-row-val no themed">—</div>
+        <div class="plan-row-val yes themed">✓</div>
+      </div>
+      <p class="pricing-note">Card &amp; crypto via Sellix · HWID-locked license · instant Discord Premium role. Prefer recurring? $2.99/mo is available.</p>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="section faq">
+      <div class="head-block">
+        <div class="eyebrow themed">FAQ</div>
+        <h2 class="h2">Good to know</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item themed">
+          <button class="faq-q" type="button" aria-expanded="true" aria-controls="faq-a-1">
+            <span class="q-text">Is this against the game's rules?</span>
+            <span class="sign themed" aria-hidden="true">–</span>
+          </button>
+          <div class="faq-a" id="faq-a-1">Automating a game can violate its Terms of Service. Horus is external (it only watches the screen and moves the mouse), which lowers but does not remove detection risk. Run it on an account you're comfortable risking — that's your call to make.</div>
+        </div>
+        <div class="faq-item themed">
+          <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-2">
+            <span class="q-text">Do I need to know how to code?</span>
+            <span class="sign themed" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-a-2" hidden>No. You record your setup by playing once; there are no coordinates to edit and no scripts to write. If you can play the game, you can use Horus.</div>
+        </div>
+        <div class="faq-item themed">
+          <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-3">
+            <span class="q-text">Will it work on my PC?</span>
+            <span class="sign themed" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-a-3" hidden>Yes — Horus is DPI-aware and resolution-independent, and it captures the game client directly. Record once at your resolution and it self-calibrates.</div>
+        </div>
+        <div class="faq-item themed">
+          <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-4">
+            <span class="q-text">What's the difference between Free and Premium?</span>
+            <span class="sign themed" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-a-4" hidden>Free records a setup and replays it once — a clean recorder and one-tap replay. Premium adds auto-attach, reward click-through, and the auto-replay farm loop so it runs unattended.</div>
+        </div>
+        <div class="faq-item themed">
+          <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-5">
+            <span class="q-text">How does the license work?</span>
+            <span class="sign themed" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-a-5" hidden>Premium is a one-time $4.99 key, HWID-locked to your machine and validated on our server. Buy on Sellix, get the key + a Discord Premium role instantly, paste it into Horus, done.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section id="discord" class="section">
+      <div class="final-cta themed">
+        <div class="blob blob-1 themed" aria-hidden="true"></div>
+        <div class="blob blob-2 themed" aria-hidden="true"></div>
+        <div class="inner">
+          <h2>Grab the free build in the Discord</h2>
+          <p>Free download, setup help, and the demo live in the community. Premium unlocks the auto-loop.</p>
+          <div class="cta-row">
+            <!-- TODO: Discord invite URL -->
+            <a class="btn btn-primary btn-lg themed" href="#discord">Join the Discord</a>
+            <!-- TODO: Sellix storefront URL -->
+            <a class="btn btn-elev btn-lg" href="#buy">Get Premium — $4.99</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="row">
+            <span class="mark themed" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"><circle cx="50" cy="50" r="30"/><circle cx="50" cy="50" r="12"/><line x1="50" y1="4" x2="50" y2="96"/><line x1="4" y1="50" x2="96" y2="50"/><line x1="17" y1="17" x2="83" y2="83"/><line x1="83" y1="17" x2="17" y2="83"/></svg></span>
+            <span class="name">HORUS</span>
+          </div>
+          <p>A record-and-replay vision macro for Anime Expeditions. External only — it watches the screen and moves the mouse; no game files are touched or modified.</p>
+          <p style="color:#4a5178;font-size:12px;">Use at your own risk: automating a game can violate its Terms of Service. Run it on an account you're comfortable risking. Not affiliated with the game or its developers.</p>
+        </div>
+        <div class="footer-cols">
+          <div class="footer-col">
+            <span class="label">Product</span>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="setup.html">Setup guide</a>
+            <a href="changelog.html">Changelog</a>
+          </div>
+          <div class="footer-col">
+            <span class="label">Community</span>
+            <a href="#discord">Discord</a>
+            <a href="#buy">Buy Premium</a>
+            <a href="#faq">FAQ</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <span>© 2026 Horus. Built for the community.</span>
+          <span>Card &amp; crypto via Sellix · HWID-locked keys</span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
