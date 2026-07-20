@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Horus — Record once. Farm forever. | Anime Expeditions vision macro</title>
-  <meta name="description" content="Horus is an external record-and-replay vision macro for Anime Expeditions. Play a stage once and let it attach, claim rewards, and loop while you're away. Free recorder + $4.99 lifetime Premium.">
+  <meta name="description" content="Horus is an external record-and-replay vision macro for Anime Expeditions. Play a stage once and let it attach, claim rewards, and loop while you're away. Free recorder + $2.99/mo Premium.">
   <meta name="theme-color" content="#07080f">
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Horus — Record once. Farm forever.">
-  <meta property="og:description" content="External record-and-replay macro for Anime Expeditions. Record once, then it attaches, claims rewards, and loops unattended. Free + $4.99 Premium.">
+  <meta property="og:description" content="External record-and-replay macro for Anime Expeditions. Record once, then it attaches, claims rewards, and loops unattended. Free + $2.99/mo Premium.">
   <meta property="og:image" content="assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Horus — Record once. Farm forever.">
-  <meta name="twitter:description" content="External record-and-replay macro for Anime Expeditions. Free recorder + $4.99 lifetime Premium.">
+  <meta name="twitter:description" content="External record-and-replay macro for Anime Expeditions. Free recorder + $2.99/mo Premium.">
   <meta name="twitter:image" content="assets/og.png">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -108,7 +108,7 @@
         <p>Horus <strong>sees</strong> your game the way you do. It watches the screen, recognizes what's on it, and replays your setup at the right moment — no coding, no coordinate editing. Play a stage once, then walk away while it attaches, claims your rewards, and loops for hours.</p>
         <div class="cta-row">
           <a class="btn btn-primary btn-lg themed" href="https://discord.gg/wrZWFJjSjX" target="_blank" rel="noopener">Download free</a>
-          <a class="btn btn-elev btn-lg" href="#pricing">Get Premium — $4.99</a>
+          <a class="btn btn-elev btn-lg" href="#pricing">Get Premium — $2.99/mo</a>
         </div>
         <div class="ticks">
           <span>✓ External only — no injection</span>
@@ -226,8 +226,8 @@
         </div>
         <div class="card feature themed">
           <div class="icon themed" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 100 100"><path d="M50 6 L59 41 L94 50 L59 59 L50 94 L41 59 L6 50 L41 41 Z" fill="currentColor"/></svg></div>
-          <h3>Auto-attach</h3>
-          <p>Detects the Victory/Defeat screen and re-queues the next run with no input from you.</p>
+          <h3>Attach from anywhere</h3>
+          <p>Detects the Victory/Defeat screen and re-queues the next run — or takes over mid-wave: open Settings and Horus taps Restart, confirms, and re-runs your setup the moment “Game Started!” appears.</p>
         </div>
         <div class="card feature themed">
           <div class="icon themed" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 100 100"><path d="M50 6 L59 41 L94 50 L59 59 L50 94 L41 59 L6 50 L41 41 Z" fill="currentColor"/></svg></div>
@@ -256,8 +256,8 @@
     <section id="pricing" class="section pricing">
       <div class="head-block">
         <div class="eyebrow themed">Pricing</div>
-        <h2 class="h2">Free forever. Premium once.</h2>
-        <p class="lead" style="margin:12px auto 0;">Start free with a recorder that actually works. Unlock Premium once and let it farm for you — hands-off, overnight, forever.</p>
+        <h2 class="h2">Free forever. Premium when you're ready.</h2>
+        <p class="lead" style="margin:12px auto 0;">Start free with a recorder that actually works. Go Premium for $2.99/mo and let it farm for you — hands-off, overnight, cancel anytime.</p>
       </div>
       <div class="plan-grid themed">
         <!-- header row -->
@@ -271,10 +271,11 @@
         <div class="plan-head popular themed">
           <span class="popular-tab themed">POPULAR</span>
           <div class="tier pro themed">✦ Premium</div>
-          <div class="price">$4.99</div>
-          <div class="small">one-time · lifetime</div>
-          <!-- TODO: replace href="#buy" with your Sellix storefront URL -->
-          <a class="btn btn-primary themed" href="#buy">Buy on Sellix</a>
+          <div class="price">$2.99</div>
+          <div class="small">per month · cancel anytime</div>
+          <!-- TODO: paste your Stripe Payment Link URL here. Its after-payment redirect MUST point at the
+               worker's /discord/link?session_id={CHECKOUT_SESSION_ID} — see infra/license-worker/README.md §5. -->
+          <a class="btn btn-primary themed" href="#buy">Subscribe — $2.99/mo</a>
         </div>
 
         <!-- rows -->
@@ -301,8 +302,16 @@
         <div class="plan-row-label themed">Auto-replay forever (farm loop)</div>
         <div class="plan-row-val no themed">—</div>
         <div class="plan-row-val yes themed">✓</div>
+
+        <div class="plan-row-label themed">Restart-attach (take over mid-run)</div>
+        <div class="plan-row-val no themed">—</div>
+        <div class="plan-row-val yes themed">✓</div>
+
+        <div class="plan-row-label themed">Discord self-service (/key · /hwidreset · /status)</div>
+        <div class="plan-row-val no themed">—</div>
+        <div class="plan-row-val yes themed">✓</div>
       </div>
-      <p class="pricing-note">Card &amp; crypto via Sellix · HWID-locked license · instant Discord Premium role. Prefer recurring? $2.99/mo is available.</p>
+      <p class="pricing-note">Card via Stripe · your key arrives by Discord DM right after checkout · HWID-locked license · instant @Premium role. New PC? Run /hwidreset in the Discord.</p>
     </section>
 
     <!-- ============ FAQ ============ -->
@@ -338,14 +347,14 @@
             <span class="q-text">What's the difference between Free and Premium?</span>
             <span class="sign themed" aria-hidden="true">+</span>
           </button>
-          <div class="faq-a" id="faq-a-4" hidden>Free records a setup and replays it once — a clean recorder and one-tap replay. Premium adds auto-attach, reward click-through, and the auto-replay farm loop so it runs unattended.</div>
+          <div class="faq-a" id="faq-a-4" hidden>Free records a setup and replays it once — a clean recorder and one-tap replay. Premium adds auto-attach, restart-attach, reward click-through, and the auto-replay farm loop so it runs unattended.</div>
         </div>
         <div class="faq-item themed">
           <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-5">
             <span class="q-text">How does the license work?</span>
             <span class="sign themed" aria-hidden="true">+</span>
           </button>
-          <div class="faq-a" id="faq-a-5" hidden>Premium is a one-time $4.99 key, HWID-locked to your machine and validated on our server. Buy on Sellix, get the key + a Discord Premium role instantly, paste it into Horus, done.</div>
+          <div class="faq-a" id="faq-a-5" hidden>Premium is $2.99/mo. Check out with Stripe, link your Discord on the next page, and the bot DMs your key and grants the @Premium role instantly. Paste the key into Horus once — it's HWID-locked to your machine and validated on our server. Moving PCs? Run /hwidreset in the Discord; lost the DM? /key re-sends it. Cancel anytime and the key simply lapses.</div>
         </div>
       </div>
     </section>
@@ -361,7 +370,7 @@
           <div class="cta-row">
             <a class="btn btn-primary btn-lg themed" href="https://discord.gg/wrZWFJjSjX" target="_blank" rel="noopener">Join the Discord</a>
             <!-- TODO: Sellix storefront URL -->
-            <a class="btn btn-elev btn-lg" href="#buy">Get Premium — $4.99</a>
+            <a class="btn btn-elev btn-lg" href="#buy">Get Premium — $2.99/mo</a>
           </div>
         </div>
       </div>
@@ -399,7 +408,7 @@
       <div class="footer-bottom">
         <div class="footer-bottom-inner">
           <span>© 2026 Horus. Built for the community.</span>
-          <span>Card &amp; crypto via Sellix · HWID-locked keys</span>
+          <span>Card via Stripe · HWID-locked keys</span>
         </div>
       </div>
     </footer>
