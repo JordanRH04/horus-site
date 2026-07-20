@@ -172,9 +172,22 @@
       if (lastFocus && lastFocus.focus) lastFocus.focus();
     }
 
-    // Any link to #buy (nav, hero, pricing "Subscribe", footer) opens the modal.
-    document.querySelectorAll('a[href="#buy"], [data-open-buy]').forEach(function (el) {
-      el.addEventListener('click', open);
+    // Any link to #buy (nav/hero "Get Premium", pricing "Subscribe", footer) opens
+    // the modal. Same-page links preventDefault; cross-page "Get Premium" buttons on
+    // changelog/setup point at index.html#buy and are caught by the hash check below.
+    document.querySelectorAll('a[href="#buy"], a[href="index.html#buy"], [data-open-buy]').forEach(function (el) {
+      // On other pages an index.html#buy link must navigate normally (then auto-open
+      // on load); only intercept when the modal actually exists on this page.
+      el.addEventListener('click', function (e) {
+        var href = el.getAttribute('href') || '';
+        if (href.indexOf('index.html') === 0 && !document.getElementById('buy-modal')) return;
+        open(e);
+      });
+    });
+    // Landing on this page with #buy (e.g. "Get Premium" from another page) opens it.
+    if (location.hash === '#buy') open();
+    window.addEventListener('hashchange', function () {
+      if (location.hash === '#buy') open();
     });
 
     closeBtn.addEventListener('click', close);
@@ -232,6 +245,16 @@
     });
   }
 
+  /* ---------- Support email (assembled in JS so the literal address never
+     appears in the static HTML — basic scraper obfuscation) ---------- */
+  function initSupportMail() {
+    document.querySelectorAll('.js-support').forEach(function (a) {
+      var addr = a.getAttribute('data-u') + '@' + a.getAttribute('data-d');
+      a.href = 'mailto:' + addr;
+      a.textContent = addr;
+    });
+  }
+
   function ready(fn) {
     if (document.readyState !== 'loading') fn();
     else document.addEventListener('DOMContentLoaded', fn);
@@ -242,5 +265,6 @@
     initFaq();
     initMobileNav();
     initBuyModal();
+    initSupportMail();
   });
 })();
