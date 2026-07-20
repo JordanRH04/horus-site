@@ -245,6 +245,12 @@ button:focus-visible,
   color: var(--text); background: var(--elev); border: 1px solid var(--border);
 }
 .btn-elev:hover { color: var(--text); filter: brightness(1.12); }
+.btn-discord {
+  color: #fff; background: #5865f2; border: 1px solid transparent;
+  box-shadow: 0 8px 20px -8px #5865f2;
+}
+.btn-discord:hover { color: #fff; filter: brightness(1.08); }
+.btn-discord svg { width: 18px; height: 18px; }
 .btn-lg { font-size: 17px; min-height: 56px; padding: 0 26px; border-radius: 13px; }
 
 /* mobile nav toggle */
