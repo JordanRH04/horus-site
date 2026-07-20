@@ -139,6 +139,99 @@
     });
   }
 
+  /* ---------- Buy modal ---------- */
+  // Your Stripe Payment Link. Its "After payment" redirect must point at the
+  // worker's /discord/link?session_id={CHECKOUT_SESSION_ID} so the buyer links
+  // Discord and the bot DMs their key (see infra/license-worker/README.md §5).
+  var STRIPE_LINK = 'https://buy.stripe.com/3cI3cx7WDaFod1GbzL0Ny00';
+
+  function initBuyModal() {
+    var modal = document.getElementById('buy-modal');
+    if (!modal) return; // modal only lives on index.html
+    var closeBtn = document.getElementById('buy-close');
+    var couponInput = document.getElementById('coupon-input');
+    var couponBtn = document.getElementById('coupon-btn');
+    var couponNote = document.getElementById('coupon-note');
+    var confirm = document.querySelector('.buy-confirm');
+    var confirmInput = document.getElementById('confirm-input');
+    var payBtn = document.getElementById('pay-btn');
+    var payHint = document.getElementById('pay-hint');
+    var couponApplied = false;
+    var lastFocus = null;
+
+    function open(e) {
+      if (e) e.preventDefault();
+      lastFocus = document.activeElement;
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+    function close() {
+      modal.hidden = true;
+      document.body.style.overflow = '';
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    // Any link to #buy (nav, hero, pricing "Subscribe", footer) opens the modal.
+    document.querySelectorAll('a[href="#buy"], [data-open-buy]').forEach(function (el) {
+      el.addEventListener('click', open);
+    });
+
+    closeBtn.addEventListener('click', close);
+    // Click on the backdrop (not the panel) closes.
+    modal.addEventListener('click', function (e) { if (e.target === modal) close(); });
+    // Links inside the modal that should dismiss it (e.g. "risk to my account" -> FAQ).
+    modal.querySelectorAll('[data-close-buy]').forEach(function (a) {
+      a.addEventListener('click', close);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !modal.hidden) close();
+    });
+
+    // Coupon: applying just flags it; the code is forwarded to Stripe at pay time.
+    function applyCoupon() {
+      var code = (couponInput.value || '').trim();
+      if (!code) return;
+      couponApplied = true;
+      couponBtn.textContent = 'Applied';
+      couponNote.textContent = 'Code “' + code + '” will be applied at checkout';
+      couponNote.hidden = false;
+    }
+    couponBtn.addEventListener('click', applyCoupon);
+    couponInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') { e.preventDefault(); applyCoupon(); }
+    });
+    // Editing the code after applying re-arms it.
+    couponInput.addEventListener('input', function () {
+      couponApplied = false;
+      couponBtn.textContent = 'Apply';
+      couponNote.hidden = true;
+    });
+
+    // Pay is gated behind the risk-acceptance checkbox.
+    function syncConfirm() {
+      var on = confirmInput.checked;
+      confirm.classList.toggle('on', on);
+      payBtn.disabled = !on;
+      payHint.textContent = on
+        ? 'Secure checkout on Stripe · card & Apple/Google Pay'
+        : 'Check the box above to unlock payment.';
+    }
+    confirmInput.addEventListener('change', syncConfirm);
+    syncConfirm();
+
+    payBtn.addEventListener('click', function () {
+      if (!confirmInput.checked) return;
+      var url = STRIPE_LINK;
+      var code = (couponInput.value || '').trim();
+      if (couponApplied && code) {
+        url += (url.indexOf('?') >= 0 ? '&' : '?') +
+          'prefilled_promo_code=' + encodeURIComponent(code);
+      }
+      window.open(url, '_blank', 'noopener');
+    });
+  }
+
   function ready(fn) {
     if (document.readyState !== 'loading') fn();
     else document.addEventListener('DOMContentLoaded', fn);
@@ -148,5 +241,6 @@
     initTheme();
     initFaq();
     initMobileNav();
+    initBuyModal();
   });
 })();
