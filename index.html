@@ -329,6 +329,9 @@
         <div class="plan-row-val yes themed">✓</div>
       </div>
       <p class="pricing-note">Card via Stripe · your key arrives by Discord DM right after checkout · HWID-locked license · instant @Premium role. New PC? Run /hwidreset in the Discord.</p>
+      <div class="compat-callout themed" role="note">
+        <strong>✓ Test before you pay.</strong> Install the <a href="https://discord.gg/wrZWFJjSjX" target="_blank" rel="noopener">free version</a> first — it uses the same screen-recognition as Premium, so it confirms Horus runs on <em>your</em> PC. Because you can test compatibility for free, Premium is non-refundable (cancel anytime to stop future charges).
+      </div>
     </section>
 
     <!-- ============ FAQ ============ -->
@@ -357,7 +360,21 @@
             <span class="q-text">Will it work on my PC?</span>
             <span class="sign themed" aria-hidden="true">+</span>
           </button>
-          <div class="faq-a" id="faq-a-3" hidden>Yes — Horus is DPI-aware and resolution-independent, and it captures the game client directly. Record once at your resolution and it self-calibrates.</div>
+          <div class="faq-a" id="faq-a-3" hidden>Most likely, yes. Horus captures the game client directly and matches across common resolutions (1080p, 1440p, 4K) and both high and low graphics settings, with a one-click “Fix detection” to lock it to your exact screen if needed. But recognition depends on your PC rendering the game smoothly — a very old or heavily lagging machine can drop frames faster than any screen-reader can follow. <b>That’s why the free version exists: install it first and confirm it detects and replays on your machine before you ever pay.</b></div>
+        </div>
+        <div class="faq-item themed">
+          <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-compat">
+            <span class="q-text">I have a low-end or laggy laptop — will it run?</span>
+            <span class="sign themed" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-a-compat" hidden>Try the <a href="https://discord.gg/wrZWFJjSjX" target="_blank" rel="noopener">free version</a> first — it uses the exact same screen-recognition as Premium, so it’s a true compatibility test. If the free build records a setup, recognizes the Repeat/Victory screen, and replays it on your machine, Premium’s auto-loop will too. If the free version struggles on your hardware, Premium won’t fix that — the bottleneck is the PC keeping up, not the license. Run Horus in fullscreen at minimum graphics for the best shot on a weaker machine.</div>
+        </div>
+        <div class="faq-item themed">
+          <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-refund">
+            <span class="q-text">Can I get a refund?</span>
+            <span class="sign themed" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-a-refund" hidden>Because the free version lets you fully test compatibility <em>before</em> paying, Premium subscriptions are <b>non-refundable</b>. It’s a monthly subscription you can cancel anytime — cancel and the key simply lapses at the end of the period, with no future charges. Please confirm the free build works on your PC before subscribing.</div>
         </div>
         <div class="faq-item themed">
           <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-4">
@@ -477,6 +494,7 @@
         Pay with Stripe
       </button>
       <div class="buy-hint" id="pay-hint">Check the box above to unlock payment.</div>
+      <div class="buy-fineprint" style="margin-top:10px;text-align:center;">Tested the <a href="https://discord.gg/wrZWFJjSjX" target="_blank" rel="noopener">free version</a> on your PC? Premium is a monthly subscription, non-refundable — cancel anytime.</div>
     </div>
   </div>
 
