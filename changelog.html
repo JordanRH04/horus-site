@@ -120,8 +120,6 @@
             <li>Free runs now sync themselves to the game: press Start whenever, then hit Play in-game — placement fires the instant the battle actually begins, same accuracy as Premium. No time limit; it waits while you navigate menus.</li>
             <li>If the stage never starts, Horus now stops safely instead of clicking on the wrong screen.</li>
             <li>A Defeat now ends the free run right away (it watches for the Repeat screen too) instead of waiting out a long timeout.</li>
-            <li>Horus now asks for administrator access at launch — this makes clicks land even when Roblox runs elevated (the #1 cause of “it sees the game but nothing happens”).</li>
-            <li>Closing Horus now always fully exits — no more frozen leftover process to hunt down in Task Manager.</li>
             <li>The activity log now walks you through your next step at every stage — launch, start, and end of run — tailored to Free or Premium, so you can get going without reading any guide.</li>
           </ul>
         </div>
@@ -133,8 +131,8 @@
           </div>
           <div class="tl-title">Big-screen &amp; 4K support</div>
           <ul>
-            <li>Detection now covers very large displays (3000px+ wide / 4K and beyond), where the game shrinks its UI more than before.</li>
-            <li>“Fix detection” is now in the HD interface too, and “Check my setup” points big-screen users straight at it.</li>
+            <li>Detection widened to cover very large displays (3000px+ wide / 4K and beyond). <em>Superseded in v2.0: the game window is auto-sized to one standard, so your screen size no longer matters at all.</em></li>
+            <li>“Fix detection” added to the HD interface, and “Check my setup” points big-screen users straight at it.</li>
             <li>The HD window sizes itself correctly on scaled-up high-DPI monitors — no more cramped, misrendered buttons.</li>
           </ul>
         </div>
@@ -144,9 +142,9 @@
             <span class="tl-v themed">v1.3.5</span>
             <span class="tl-date">Jul 2026</span>
           </div>
-          <div class="tl-title">HD interface now works out of the box</div>
+          <div class="tl-title">HD interface: no extra downloads</div>
           <ul>
-            <li>The HD interface now launches reliably — no extra downloads, it uses the .NET that already ships with Windows. Switch it on in-app anytime (auto-falls back to the reliable UI on unsupported PCs).</li>
+            <li>The optional HD interface now uses the .NET that already ships with Windows — no extra downloads. It’s still a beta look: the reliable interface stays the default, and Horus auto-falls back to it on PCs where HD can’t start.</li>
           </ul>
         </div>
         <div class="tl-entry">
@@ -157,7 +155,7 @@
           </div>
           <div class="tl-title">One-click “Fix detection” for any PC</div>
           <ul>
-            <li>New “Fix detection” button: on the Victory/Defeat screen, one click re-learns the buttons from your exact display — the reliable fallback for any resolution or graphics setup.</li>
+            <li>New “Fix detection” button: one click re-learns the buttons from your exact display — the reliable fallback for any graphics setup. <em>(As of v2.0 it works on any screen — end screen, Start Game vote, or mid-battle.)</em></li>
           </ul>
         </div>
         <div class="tl-entry">
@@ -169,7 +167,7 @@
           <div class="tl-title">Works across PCs — high &amp; low graphics</div>
           <ul>
             <li>Detection now recognizes buttons on both high- and low-graphics setups, so the loop runs the same whether your PC is a beast or a potato.</li>
-            <li>Wider resolution range: the same setup matches across 1080p, 1440p, and 4K without re-capturing anything.</li>
+            <li>Wider resolution matching across 1080p, 1440p, and 4K. <em>Superseded in v2.0 by the auto-sized standard window.</em></li>
             <li>HD interface starts more reliably on PCs that have both .NET versions installed.</li>
           </ul>
         </div>
